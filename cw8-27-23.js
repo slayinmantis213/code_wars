@@ -21,3 +21,22 @@ function sum(numbers) {
     }
     return sum;
 };
+
+const sumWithInitial = array1.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
+
+
+// return masked string
+function maskify(cc) {
+    if (cc.length < 5) {
+        return cc;
+    }
+    var temp = '';
+    for (var i = 0; i < cc.length - 4; i++) {
+        temp += '#';
+    }
+    temp += cc.slice(cc.length - 4);
+    cc = temp;
+    return cc;
+}
+
+console.log(maskify('129384761239450189273598'))
