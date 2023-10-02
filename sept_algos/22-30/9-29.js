@@ -29,4 +29,4 @@ function mergeSort(arr) {
     )
 }
 
-console.log(mergeSort(testArr))
+console.log(mergeSort([16,15,9,6,14,11]))
