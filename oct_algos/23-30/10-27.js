@@ -345,7 +345,8 @@ class ListNode {
 
     concat(addList) {
         if (this.isEmpty()) {
-            return addList;
+            this.head = addList.head
+            return this;
         }
         let runner = this.head;
         while(runner.next){
@@ -446,9 +447,9 @@ class ListNode {
   const unorderedList = new SinglyLinkedList().insertAtBackMany([
     -5, -10, 4, -3, 6, 1, -7, -2,
   ]);
-  console.log(unorderedList.concat(secondThreeList).toArr());
+//   console.log(unorderedList.concat(secondThreeList).toArr());
   console.log(unorderedList.moveMinToFront().toArr());
-  console.log(unorderedList.splitOnVal(6).toArr());
+//   console.log(unorderedList.splitOnVal(6).toArr());
   /* node 4 connects to node 1, back to head */
   // const perfectLoopList = new SinglyLinkedList().insertAtBackMany([1, 2, 3, 4]);
   // perfectLoopList.head.next.next.next = perfectLoopList.head;
