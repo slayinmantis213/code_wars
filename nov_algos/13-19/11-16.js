@@ -158,3 +158,5 @@ class Queue {
 
 const testQ = new Queue([1,2,69,5,1,2,69])
 console.log(testQ.isSumOfHalvesEqual())
+
+module.exports = {Queue}
