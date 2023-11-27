@@ -25,9 +25,10 @@ function find_fewest_outposts_count(start, target, outposts, tankSize) {
     let notVisited = new Set(outposts);
     let newQueue = new Queue([start]);
     let steps = 0;
+    let front;
     while (newQueue.size()) {
         for (let i = 0; i < newQueue.size(); i++) {
-            let front = newQueue.dequeue();
+            front = newQueue.dequeue();
             // console.log("Front: "+ front ,"|| Target: " + target, steps)
             if (getDistance(front, target) <= tankSize) {
                 return steps + 1;
